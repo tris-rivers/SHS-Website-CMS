@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>Announcements</title>
+        <!--CSS--><!-- Latest compiled and minified CSS -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="throbber" style="display:none; min-height:120px;"></div>
+        <div id="noty-holder"></div>
+        <div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse navbar-inverse">
+           
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="home.html"><i class="fa fa-fw fa-home"></i>  HOME</a>
+                </li>     
+                <li>
+                    <a href="about.html"><i class="fa fa-fw fa-info-circle"></i>  ABOUT</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-users"></i>  FACULTY <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-2" class="collapse">
+                        <li><a href="admin.html"><i class="fa fa-angle-double-right"></i> Administration</a></li>
+                        <li><a href="strandChairs.html"><i class="fa fa-angle-double-right"></i> Strand Chairs</a></li>
+                        <li><a href="facultyMembers.html"><i class="fa fa-angle-double-right"></i> Faculty Members</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-newspaper-o"></i>  NEWS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-3" class="collapse">
+                        <li><a href="announcements.html"><i class="fa fa-angle-double-right"></i> Announcements</a></li>
+                        <li><a href="events.html"><i class="fa fa-angle-double-right"></i> Events</a></li>
+                        <li><a href="gallery.html"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
+                    </ul>
+                </li>  
+                <li>
+                    <a href="strands.html"><i class="fa fa-fw fa-graduation-cap"></i>  STRANDS</a>
+                </li>
+                <li>
+                    <a href="downloadables.html"><i class="fa fa-fw fa-download"></i>  DOWNLOADABLES</a>
+                </li>
+                <li>
+                    <a href="admission.html"><i class="fa fa-fw fa fa-book"></i> ADMISSION</a>
+                </li>
+                <li>
+                    <a href="chatbot.html"><i class="fa fa-fw fa-commenting"></i>  CHATBOT</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa fa-sign-out"></i> LOG OUT</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                
+            </div>
+            <!-- /.row -->
+            <div class="content-wrap">
+                <div class="col-sm-12" id="content">
+                    <h2>Announcements</h2><hr>
+                    <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#addAnnouncementModal"><i class="fa fa-plus"></i> Add New Announcement</button>
+                    <!--ADD ANNOUNCEMENT MODAL-->
+                    <div class="modal fade" id="addAnnouncementModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Add New Announcement</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="announcementTitle" class="col-sm-3 control-label">Title</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="announcementTitle" placeholder="Title" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="announcementDesc" class="col-sm-3 control-label">Description</label>
+                                        <div class="col-sm-9">
+                                            <textarea id="announcementDesc" class="form-control" rows="3" placeholder="Write a short description..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="featuredIMG" class="col-sm-3 control-label">Featured Image</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" id="featuredIMG">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="wordFile" class="col-sm-3 control-label">File</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" id="wordFile">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal -->
+                    <br><br>
+                    <div>
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <th>Date Published</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Featured Image</th>
+                                <th>File</th>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3-1-2018</td>
+                                    <td>Tryouts for Girl's Basketball Team</td>
+                                    <td>The Tryouts for SHS GoodWill Games for the Girl's Basketball Team will be on November 5, 2017 (Sunday) at Colegio De San Lorenzo (Congressional Ave., Quezon City) from 8:00AM to 12:00NN. Call Time is 7:00AM</td>
+                                    <td>IMG_1234.jpg</td>
+                                    <td>ANC_1234.docx</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editAnnouncementModal">Edit</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-xs">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--EDIT ANNOUNCEMENT MODAL-->
+                    <div class="modal fade" id="editAnnouncementModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Edit Announcement</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="announcementTitle" class="col-sm-3 control-label">Title</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="announcementTitle" placeholder="Title" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="announcementDesc" class="col-sm-3 control-label">Description</label>
+                                        <div class="col-sm-9">
+                                            <textarea id="announcementDesc" class="form-control" rows="3" placeholder="Write a short description..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="featuredIMG" class="col-sm-3 control-label">Featured Image</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" id="featuredIMG">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="wordFile" class="col-sm-3 control-label">File</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" id="wordFile">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- /.modal -->
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>
