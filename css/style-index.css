@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+.btn-login{
+    background-color: #229954;
+    color: white;
+}
+
+header{
+    background: rgba(0, 0, 100, 0.5);
+    height: 100vh;
+}
+
+.home-body{
+    background: url('img/background2.jpg') no-repeat
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form{
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px rgb(211, 211, 211);
+    margin: 10% 38% 0 38%;
+    padding: 2% 2% 2% 2%;
+}
+
+.login-label{
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.menu{
+    float: right;
+    list-style: none;
+    margin: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #fff;
+}
+
+.menu li a:hover{
+    color: coral;
+    border-bottom: 1px solid coral;
+    transition: .4s;
+}
+
+.welcome{
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fff;
+    top: 200px;
+}
+
+.welcome h1{
+    font-size: 52px;
+    margin: 25px;
+    text-align: center;
+    margin-left: 32%;
+}
+
+.brand{
+    color: #fff;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    margin: 20px;
+}
+
+.btn-home{
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 5px;
+    padding: 7px 28px;
+    text-decoration: none;
+    border: 1px solid coral;
+    border-radius: 25px
+}
+
+.btn1:hover{
+    background: coral;
+    color: white;
+    transition: .4s;
+}
+
+.btn1{
+    color: coral;
+}
