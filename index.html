@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>UST Senior High School CMS | Login</title>
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body style="background-color: #fff">
+        <div class="login-form">
+            <div class="login-label">
+                <h3>SYSTEM LOGIN</h3>
+            </div>
+            <form class="form" name="login">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-fw fa-user-circle"></i></div>
+                                <input type="text" class="form-control" id="username" placeholder="Username" name="uname">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-fw fa-lock"></i></div>
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="pw">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-block btn-warning" onclick="check(this.form)" value="Login">
+                    </div>
+                </div>
+            </form>
+        <div>
+        <script language="javascript">
+            function check(form)/*function to check userid & password*/
+            {
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.uname.value == "admin"){
+                    if(form.pw.value == "abc123") {
+                        window.open('home.html')/*opens the target page while Id & password matches*/
+                    }
+                    else {
+                        alert("Invalid Password")
+                    }
+                }
+                else{
+                    alert("Invalid Username")/*displays error message*/
+                }
+            }
+        </script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
