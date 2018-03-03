@@ -79,6 +79,7 @@
                         </ul>
 
                         <div class="tab-content">
+                            <!--***********************STRAND INFO TAB PANE******************************-->
                             <div id="infoTab" class="tab-pane fade in active">
                                 <table class="table table-condensed table-hover">
                                     <thead>
@@ -138,15 +139,84 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary">Save Changes</button>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                        
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> 
                                     </div>
                                     </div>
                                 </div>
                             </div><!-- /.modal -->
+
+                            <!--***********************STRAND RESEARCH TAB PANE******************************-->
                             <div id="researchTab" class="tab-pane fade">
-                                <h1>w0rld</h1>
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <th>Strand</th>
+                                        <th>Title</th>
+                                        <th>Abstract</th>
+                                        <th></th>
+                                        <th></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>STEM</td>
+                                            <td>Recovery process and science and technology: An overview</td>
+                                            <td>ABSTRACT: Due to the recent big disasters, the recovery and its process have been emphasized. Science and technology can contribute to making the recovery process more effective.</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editStrandResearchModal">Edit</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-xs">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
+
+                            <!--EDIT STRAND RESEARCH MODAL-->
+                            <div class="modal fade" id="editStrandResearchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Edit Strand Research</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="strand" class="col-sm-3 control-label">Strand</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="strand">
+                                                        <option>STEM</option>
+                                                        <option>HUMSS</option>
+                                                        <option>GAS</option>
+                                                        <option>ABM</option>
+                                                        <option>MAD</option>
+                                                        <option>PES</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="researchTitle" class="col-sm-3 control-label">Title</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="researchTitle" placeholder="Title" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="abstract" class="col-sm-3 control-label">Abstract</label>
+                                                <div class="col-sm-9">
+                                                    <textarea id="abstract" class="form-control" rows="3" placeholder="Write abstract here..."></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Save Changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> 
+                                    </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal -->
                         </div>
                     </div>
 
