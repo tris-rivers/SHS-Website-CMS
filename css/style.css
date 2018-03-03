@@ -262,3 +262,7 @@ th, td{
 .heading{
     display: inline-block
 }
+
+.strand-pagination{
+    position: fixed; bottom: 0; left: 50%
+}
