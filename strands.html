@@ -71,9 +71,83 @@
                 <div class="col-sm-12" id="content">
                     <h2>STRANDS</h2><hr>
                     
-                    <br><br>
+                    <br>
                     <div>
-                        <h1><!--HENLO PAGOD NA KO HUHUHUHU PART 3--></h1>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#infoTab">Information</a></li>
+                            <li><a href="#researchTab">Researches</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="infoTab" class="tab-pane fade in active">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <th>Strand</th>
+                                        <th>Description</th>
+                                        <th>Image</th>
+                                        <th></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>STEM</td>
+                                            <td>The Science, Technology, Engineering, and Mathematics Strand offers the needed academic grounding for those who intend to pursue tertiary programs that are geared toward the physical sciences, mathematics, engineering and technology. It has an immersion subject that provides a venue for the application of the knowledge gained in both the contextualized and specialized subjects.</td>
+                                            <td>IMG_123.jpg</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editStrandInfoModal">Edit</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--EDIT STRAND INFO MODAL-->
+                            <div class="modal fade" id="editStrandInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Edit Strand Info</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="strand" class="col-sm-3 control-label">Strand</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="strand">
+                                                        <option>STEM</option>
+                                                        <option>HUMSS</option>
+                                                        <option>GAS</option>
+                                                        <option>ABM</option>
+                                                        <option>MAD</option>
+                                                        <option>PES</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="strandDesc" class="col-sm-3 control-label">Description</label>
+                                                <div class="col-sm-9">
+                                                    <textarea id="strandDesc" class="form-control" rows="3" placeholder="Write description here..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="strandImage" class="col-sm-3 control-label">Image</label>
+                                                <div class="col-sm-9">
+                                                    <input type="file" id="strandImage">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Save Changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.modal -->
+                            <div id="researchTab" class="tab-pane fade">
+                                <h1>w0rld</h1>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
