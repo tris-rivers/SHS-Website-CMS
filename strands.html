@@ -177,11 +177,68 @@
 
                             <!--***********************STRAND RESEARCH TAB PANE******************************-->
                             <div id="researchTab" class="tab-pane fade">
+                                <br>
+                                <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#addResearchModal"><i class="fa fa-plus"></i> Add New Research Paper</button>     
+                                <br><br>
+                                <!--ADD FACULTY MEMBER MODAL-->
+                                <div class="modal fade" id="addResearchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Add New Faculty Member</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label for="strand" class="col-sm-3 control-label">Strand</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control" id="strand">
+                                                            <option>STEM</option>
+                                                            <option>HUMS/option>
+                                                            <option>GAS</option>
+                                                            <option>ABM</option>
+                                                            <option>MADS</option>
+                                                            <option>PES</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="researchTitle" class="col-sm-3 control-label">Research Title</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" class="form-control" id="researchTitle" placeholder="Research Title" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="abstract" class="col-sm-3 control-label">Abstract</label>
+                                                    <div class="col-sm-9">
+                                                            <textarea id="abstract" class="form-control" rows="6" placeholder="Insert Abstract here..."></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="researchFile" class="col-sm-3 control-label">File</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="file" id="researchFile">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.modal -->                           
                                 <table class="table table-condensed table-hover">
                                     <thead>
                                         <th>Strand</th>
-                                        <th>Title</th>
+                                        <th>Research Title</th>
                                         <th>Abstract</th>
+                                        <th>File</th>
                                         <th></th>
                                         <th></th>
                                     </thead>
@@ -190,6 +247,7 @@
                                             <td>STEM</td>
                                             <td>Recovery process and science and technology: An overview</td>
                                             <td>ABSTRACT: Due to the recent big disasters, the recovery and its process have been emphasized. Science and technology can contribute to making the recovery process more effective.</td>
+                                            <td>researchTitle.pdf</td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#editStrandResearchModal">Edit</button>
                                             </td>
@@ -236,26 +294,32 @@
                                                 <div class="col-sm-9">
                                                     <select class="form-control" id="strand">
                                                         <option>STEM</option>
-                                                        <option>HUMSS</option>
+                                                        <option>HUMS/option>
                                                         <option>GAS</option>
                                                         <option>ABM</option>
-                                                        <option>MAD</option>
+                                                        <option>MADS</option>
                                                         <option>PES</option>
                                                     </select>
                                                 </div>
                                             </div>
-
                                             <div class="form-group">
-                                                <label for="researchTitle" class="col-sm-3 control-label">Title</label>
+                                                <label for="researchTitle" class="col-sm-3 control-label">Research Title</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="researchTitle" placeholder="Title" required>
+                                                    <input type="text" class="form-control" id="researchTitle" placeholder="Research Title" required>
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="abstract" class="col-sm-3 control-label">Abstract</label>
                                                 <div class="col-sm-9">
-                                                    <textarea id="abstract" class="form-control" rows="3" placeholder="Write abstract here..."></textarea>
+                                                        <textarea id="abstract" class="form-control" rows="6" placeholder="Insert Abstract here..."></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="researchFile" class="col-sm-3 control-label">File</label>
+                                                <div class="col-sm-9">
+                                                    <input type="file" id="researchFile">
                                                 </div>
                                             </div>
                                         </form>
