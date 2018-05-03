@@ -222,6 +222,10 @@ th, td{
     text-decoration: none !important;
 }
 
+.cht-margin{
+    margin-left: 5em;
+}
+
 /**Gallery**/
 .image {
     opacity: 1;
